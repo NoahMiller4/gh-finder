@@ -14,3 +14,47 @@
 body {
     background-color: var(--app-bg-dark);
 }
+
+/*-----------------------------------------------------*/
+/* Input                                               */
+/*-----------------------------------------------------*/
+
+h1 {
+    margin-top: 200px;
+    text-align: center;
+    color: #fff;
+}
+
+.search {
+    display: grid;
+    text-align: center;
+}
+
+input[type=text] {
+    margin-top: 10px;
+    width: 250px;
+    height: 42px;
+    padding-left: 15px;
+    border-radius: var(--app-border-raidus);
+    font-size: 18px;
+    color: #000;
+}
+
+input[type=submit] {
+    position: relative;
+    bottom: 1px;
+}
+
+input[type=submit] {
+    margin-top: 15px;
+    padding: 0 15px;
+    margin-left: 15px;
+    height: 43px;
+    border-radius: var(--app-border-raidus);
+    background-color: #e69500;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
