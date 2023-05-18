@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+:root {
+    --app-border-raidus: 5px;
+    --app-grey-bg: #f3f4f5;
+    --app-bg-dark: #1a1c24;
+}
+
+.container {
+    width: min(100% - 30px, 1200px);
+    margin-inline: auto;
+}
+
+body {
+    background-color: var(--app-bg-dark);
+}
