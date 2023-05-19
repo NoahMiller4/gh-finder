@@ -2,7 +2,7 @@
 
 :root {
     --app-border-raidus: 5px;
-    --app-grey-bg: #f3f4f5;
+    --app-grey-bg: #c1c3c5;
     --app-bg-dark: #1a1c24;
 }
 
@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: var(--app-bg-dark);
+    background-color: #d8d8d8;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -23,9 +23,9 @@ body {
 h1 {
     margin-top: 200px;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: 0.2rem;
-    color: #fff;
+    color: #000;
 }
 
 .search {
@@ -34,7 +34,7 @@ h1 {
 }
 
 input[type=text] {
-    margin-top: 10px;
+    margin-top: 40px;
     width: 250px;
     height: 42px;
     padding-left: 15px;
@@ -42,21 +42,22 @@ input[type=text] {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
+    background-color: rgb(0 0 0 / 0.1);
     color: #000;
 }
 
-input[type=submit] {
+button, input[type=submit] {
     position: relative;
     bottom: 1px;
 }
 
-input[type=submit] {
+button,input[type=submit] {
     margin-top: 15px;
     padding: 0 15px;
     margin-left: 15px;
     height: 43px;
     border-radius: var(--app-border-raidus);
-    background-color: #e69500;
+    background-color: #a700a7;
     font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
@@ -69,23 +70,88 @@ input[type=submit] {
 /* Repositories                                        */
 /*-----------------------------------------------------*/
 
-img {
-    width: 200px;
-    height: 200px;
-
-}
-
 .info {
+    margin: 0;
     position: absolute;
-    display: flex;
+    top: 30%;
     left: 50%;
-    top: 50%;
-    width: 600px;
-    height: 600px;
-    justify-content: center;
-    text-align: center;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .repos {
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 23%;
+    text-align: left;
+}
+
+img {
+    margin: auto;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.info h1 {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+span {
     display: inline-block;
+    text-align: center;
+    width: 100px;
+    color: #008000;
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+.p {
+    display: flex;
+    text-align: center;
+}
+
+.info p {
+    width: 100px;
+    color: #000;
+}
+
+button {
+    width: 200px;
+    border-radius: 50px;
+    left: 33px;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.repo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: var(--app-grey-bg);
+    width: 800px;
+    height: 80px;
+    border-radius: 8px;
+}
+  
+.last-updated {
+    color: #666;
+}
+
+h2 {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    color:#008000;
 }

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 
 const User = () => {
@@ -9,7 +9,7 @@ const User = () => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    const token = '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';
+    const token = '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';
 
     const getUser = async () => {
       try {
@@ -47,35 +47,43 @@ const User = () => {
 
   return (
     <div>
-      <div className='info'>
+       <div className='info'>
         <img src={user.avatar_url} alt={user.name} />
         <h1>{user.name}</h1>
-        <p><span style={{ color: 'green' }}>{user.public_repos}</span>Repositories</p>
-        <p><span style={{ color: 'green' }}>{user.followers}</span>Followers</p>
-        <p><span style={{ color: 'green' }}>{user.following}</span>Following</p>
+        <span>{user.public_repos}</span> 
+        <span>{user.followers}</span>
+        <span>{user.following}</span>
+        <div className='p'>
+          <p>Repositories</p>
+          <p>Followers</p>
+          <p>Following</p>
+        </div>
+        <button>
+        <Link 
+          className='link' 
+          target="_blank"
+          to={`https://github.com/${user.login}`}>
+          Go To GitHub
+        </Link>
+      </button>
       </div>
       <div className='repos'>
         <h2>My Repositories</h2>
-        <ul>
-          {repos.map((repo) => (
-            <li key={repo.id}>{repo.name}</li>
-          ))}
-        </ul>
+        {repos.map((repo) => (
+          <div className="repo" key={repo.id}>
+            <div>
+              <h3>{repo.name}</h3>
+              <p>{repo.description}</p>
+            </div>
+            <div className="last-updated">
+              Updated on {new Date(repo.updated_at).toLocaleDateString('en-US', 
+              { year: 'numeric', month: 'long', day: 'numeric' })}
+            </div>
         </div>
+      ))}
+    </div>
     </div>
   );
 };
 
 export default User;
-
-
-
-/*import axios from 'axios'
-
-function User() {
-  return (
-    <div></div>
-  )
-}
-
-export default User*/
