@@ -9,14 +9,10 @@ const User = () => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    const token = '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';
 
     const getUser = async () => {
       try {
         const response = await axios.get(`https://api.github.com/users/${username}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
         });
         setUser(response.data);
       } catch (error) {
@@ -27,9 +23,6 @@ const User = () => {
     const getRepos = async () => {
       try {
         const response = await axios.get(`https://api.github.com/users/${username}/repos`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
         });
         setRepos(response.data);
       } catch (error) {
