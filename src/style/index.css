@@ -64,3 +64,28 @@ input[type=submit] {
     color: #fff;
     cursor: pointer;
 }
+
+/*-----------------------------------------------------*/
+/* Repositories                                        */
+/*-----------------------------------------------------*/
+
+img {
+    width: 200px;
+    height: 200px;
+
+}
+
+.info {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    height: 600px;
+    justify-content: center;
+    text-align: center;
+}
+
+.repos {
+    display: inline-block;
+}
