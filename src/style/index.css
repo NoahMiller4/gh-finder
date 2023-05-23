@@ -136,7 +136,7 @@ button {
     padding: 10px;
     margin-bottom: 20px;
     background-color: var(--app-grey-bg);
-    width: 800px;
+    width: 60vw;
     height: 80px;
     border-radius: 8px;
 }
